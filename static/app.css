@@ -1,0 +1,62 @@
+.storeTitle {
+	font-size: 135%;
+}
+
+.price {
+	color: red;
+}
+
+.product {
+	color: #c45500;
+}
+
+.storeInfo {
+	position:relative;
+	left: 20px;
+}
+
+#searchForProducts {
+	color: red;
+}
+
+#productName {
+	margin-bottom: 5px;
+	height:19px;
+	width:437px;
+}
+
+#nearbyShoppingProducts {
+	background-color:#71BC78;
+	color:white;
+	position:relative;
+	right:5px;
+	height:30px;
+}
+
+#productSearching {
+	text-align: center;
+}
+
+#userGreeting {
+	text-align: center;
+}
+
+#uberOver {
+	font-family: cursive;
+}
+
+#uberLogo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+#sidebar {
+    float: left;
+    width: 50%;
+}
+
+#content-wrap {
+    float: right;
+    width: 50%;
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="util.js"></script>
+        <script src="homepage.js"></script>
+        <link rel="stylesheet" type="text/css" href="/app.css">
+    </head>
+    <body>
+        {% if token %}
+        <br>
+        <h1 id="userGreeting"> Hello {% if user_name %} {{user_name}}!  {% endif %} <br> <br>
+        You can now <span id="searchForProducts"> search for products near you </span> and Uber <span id="uberOver">over!</span> </h1> <br>
+        {% else %}
+        <h1> Something went wrong :( </h1>
+        {% endif %}
+        <form id="productSearching">
+        <input id="productName" type="text" autofocus="autofocus" placeholder="Enter product...">     </input> 
+        <br>    
+        <br>
+        <br>
+        <button type="button" id="nearbyShoppingProducts" onclick="actionForShoppingProducts(shoppingProduct, userLatitude, userLongitude)">Search for Product</button>
+        </form>
+        <br>
+        <br>
+        <br>
+        <img src="uber_badge.png" id="uberLogo">
+    </body>
+</html>

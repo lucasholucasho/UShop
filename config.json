@@ -1,0 +1,14 @@
+{
+    "access_token_url": "https://login.uber.com/oauth/token",
+    "authorize_url": "https://login.uber.com/oauth/authorize",
+    "base_url": "https://login.uber.com/",
+    "scopes": ["request", "history_lite", "profile"],
+    "name": "UShop",
+    "base_uber_url": "https://api.uber.com/v1/",
+    "base_uber_url_v1_1" : "https://api.uber.com/v1.1/",
+    "base_uber_sandbox_url": "https://sandbox-api.uber.com/v1/",
+    "uber_product_id": "23a231fd-9fa8-45a7-b212-e3f9cb69873f",
+    "base_retailigence_url": "http://apitest.retailigence.com/v2.1/",
+    "retailigence_api_key": "IIvpAo_TFIzDKQ9xIt3l89OZwvCTQgEy",
+    "retailigence_requrestorid": "test"
+}

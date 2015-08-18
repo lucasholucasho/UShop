@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/shoppingResults.js"></script>
+        <script src="/util.js"></script>
+        <link rel="stylesheet" type="text/css" href="/app.css">
+    </head>
+
+    <body>
+        <div id="sidebar">
+           <button type="button" onclick="redirect_to_demo()">Back</button>
+           <h2> <span class="product">"{{ product }}"</span> near you:</h2>
+           {% if results %}
+              <form id="stores">
+                 {% for result in results %}
+                 <input type="radio" name="storeOptions" value="{{   result.SearchResult.location.location.latitude }},{{  result.SearchResult.location.location.longitude }}"><span class="storeTitle">{{ result.SearchResult.location.name|trim }} </span>
+                    <span class="storeInfo">
+                       <br> 
+                       {{ result.SearchResult.location.address.address1|trim }}, 
+                       {{ result.SearchResult.location.address.city|trim }}, 
+                       {{ result.SearchResult.location.address.state|trim }}, 
+                       {{ result.SearchResult.location.address.postal|trim }}, 
+                       {{ result.SearchResult.location.address.country|trim }} 
+                       <br> {{ result.SearchResult.product.name|trim }}
+                       {% if result.SearchResult.price %}<br> <span class="price">${{ result.SearchResult.price|trim }}</span> {% endif %}
+                       <br> {{ result.SearchResult.distance.distance|round(1)|trim }} 
+                       {{ result.SearchResult.distance.units|trim }}
+                    </span>
+                 </input>
+                 <br>
+                 {% endfor %}
+              </form>
+        </div>
+        <div id="content-wrap">
+          <br>
+          <br>
+          <input id="destinationLatitude" type="text" placeholder="Destination Latitude">     </input> 
+          <input id="destinationLongitude" type="text" placeholder="Destination Longitude">     </input> 
+          <button type="button" onclick="actionForHailingUber(userLatitude, userLongitude, finalLatitude, finalLongitude)" id="callUber">Call an Uber</button>
+        </div>
+        {% else %}
+        <h3> No results found </h3>
+        {% endif %}
+    </body>
+</html>

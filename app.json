@@ -1,0 +1,12 @@
+{
+  "name": "UShop",
+  "keywords": ["Uber", "Retailigence", "API", "Location-based", "Shopping", "Concierge"],
+  "env": {
+    "UBER_CLIENT_ID": {
+      "description": <YOUR_CLIENT_ID>
+    },
+    "UBER_CLIENT_SECRET": {
+      "description": <YOUR_CLIENT_SECRET>
+    }
+  }
+}
