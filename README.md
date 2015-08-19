@@ -4,7 +4,7 @@ UShop
 Description
 -------------
 
-This is a location-based shopping app that uses your location to search for products near you (courtesy of the Retailigence API). From the search results page (complete with information about the store and product, along with estimated distance), you can select a store and call an Uber there (thanks Uber API!). 
+This is a location-based shopping app that uses your location to search for products near you (courtesy of the Retailigence API). From the search results page (complete with information about the store and product, along with estimated distance), you can select a store and request an Uber ride there (thanks Uber API!). 
 
 
 How to run
