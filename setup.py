@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='Python-Sample-Application',
+    name='UShop',
     version='0.0.1',
-    author='Uber Engineering',
-    author_email='developer@uber.com',
+    author='Lucas Ho',
+    author_email='lucasho2340@gmail.com',
     packages=find_packages(),
-    description='Python sample application',
+    description='Uber location-based shopping',
 )
