@@ -3,7 +3,7 @@
     "authorize_url": "https://login.uber.com/oauth/authorize",
     "base_url": "https://login.uber.com/",
     "scopes": ["request", "history_lite", "profile"],
-    "name": "UShop",
+    "name": <YOUR_APPLICATION_NAME>,
     "base_uber_url": "https://api.uber.com/v1/",
     "base_uber_url_v1_1" : "https://api.uber.com/v1.1/",
     "base_uber_sandbox_url": "https://sandbox-api.uber.com/v1/",

@@ -1,5 +1,5 @@
 {
-  "name": "UShop",
+  "name": <YOUR_APPLICATION_NAME>,
   "keywords": ["Uber", "Retailigence", "API", "Location-based", "Shopping", "Concierge"],
   "env": {
     "UBER_CLIENT_ID": {
