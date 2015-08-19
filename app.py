@@ -83,30 +83,6 @@ def demo():
     info_about_user = me()
     return render_template('demo.html', user_name = info_about_user["first_name"], token=session.get('access_token'))
 
-
-@app.route('/uberproducts/<string:latitude>/<string:longitude>', methods=['GET'])
-def uberproducts(latitude, longitude):
-    url = config.get('base_uber_url') + 'products'
-    params = {
-        'latitude': latitude,
-        'longitude': longitude,
-    }
-
-    response = app.requests_session.get(
-        url,
-        headers=generate_ride_headers(session.get('access_token')),
-        params=params,
-    )
-
-    if response.status_code != 200:
-        return 'There was an error', response.status_code
-    return render_template(
-        'uberProducts.html',
-        data=response.text,
-        latitude=latitude,
-        longitude=longitude
-    )
-
 @app.route('/shoppingsearch/<string:product>/<string:latitude>/<string:longitude>', methods=['GET'])
 def shoppingSearch(product, latitude, longitude):
 	url = config.get('base_retailigence_url') + 'products'
@@ -166,28 +142,6 @@ def hailUber(start_latitude, start_longitude, end_latitude, end_longitude, surge
 def surge():
 	surge_confirmation_id = request.args.get('surge_confirmation_id')
 	return hailUber(session['start_latitude'], session['start_longitude'], session['end_latitude'], session['end_longitude'], surge_confirmation_id)
-
-@app.route('/history', methods=['GET'])
-def history():
-    url = config.get('base_uber_url_v1_1') + 'history'
-    params = {
-        'offset': 0,
-        'limit': 5,
-    }
-
-    response = app.requests_session.get(
-        url,
-        headers=generate_ride_headers(session.get('access_token')),
-        params=params,
-    )
-
-    if response.status_code != 200:
-        return 'There was an error', response.status_code
-    return render_template(
-        'results.html',
-        endpoint='history',
-        data=response.text,
-    )
 
 
 @app.route('/me', methods=['GET'])
