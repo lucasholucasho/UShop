@@ -130,10 +130,12 @@ def hailUber(start_latitude, start_longitude, end_latitude, end_longitude, surge
 		data=json.dumps(params)
 	)
 	json_of_response = response.json()
+	print json.dumps(json_of_response)
 	if response.status_code == 202:
 		return render_template(
 			'calledUber.html',
-			data = json.dumps(json_of_response)
+			request_id = json_of_response["request_id"],
+			eta = json_of_response["eta"]
 		)
 	if response.status_code == 409 and json_of_response["meta"] is not None:
 		return redirect(json_of_response["meta"]["surge_confirmation"]["href"])

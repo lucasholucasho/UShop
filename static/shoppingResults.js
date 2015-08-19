@@ -13,6 +13,7 @@ navigator.geolocation.watchPosition(function(position) {
 	userLongitude = position.coords.longitude;
 	userLocationEmpty = false;
 	$("#callUber").prop("disabled", userLocationEmpty || destinationLatitudeEmpty || destinationLongitudeEmpty);
+	setColorOfCallUberButton();
 });
 
 var disableHailUberButtonWhenPageLoads = function () {
@@ -32,5 +33,17 @@ var populateLatLong = function() {
 	   destinationLatitudeEmpty = false;
 	   destinationLongitudeEmpty = false;
 	   $("#callUber").prop("disabled", userLocationEmpty || destinationLatitudeEmpty || destinationLongitudeEmpty);
+	   setColorOfCallUberButton();
 	});
+}
+
+var setColorOfCallUberButton = function () {
+	if ($('#callUber').prop('disabled') == true)
+	{
+       $('#callUber').css('background-color', "#71BC78");
+	}
+	else
+	{
+	   $('#callUber').css('background-color', "green");
+	}
 }

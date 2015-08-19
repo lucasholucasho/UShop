@@ -33,6 +33,19 @@
 	height:30px;
 }
 
+#callUber {
+	background-color:#71BC78;
+	color:white;
+	position:relative;
+	right:5px;
+	margin-left: 5px;
+}
+
+#destinationLongitude, #destinationLatitude {
+	padding-top:2px;
+	padding-bottom:3px;
+}
+
 #productSearching {
 	text-align: center;
 }
