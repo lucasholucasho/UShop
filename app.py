@@ -79,7 +79,6 @@ def submit():
 
 @app.route('/demo', methods=['GET'])
 def demo():
-    print session.get('access_token')
     info_about_user = me()
     return render_template('demo.html', user_name = info_about_user["first_name"], token=session.get('access_token'))
 
@@ -130,7 +129,6 @@ def hailUber(start_latitude, start_longitude, end_latitude, end_longitude, surge
 		data=json.dumps(params)
 	)
 	json_of_response = response.json()
-	print json.dumps(json_of_response)
 	if response.status_code == 202:
 		return render_template(
 			'calledUber.html',
