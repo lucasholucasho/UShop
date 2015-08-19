@@ -12,6 +12,6 @@ These developer tools/features would facilitate debugging/testing:
 
 1) Having a log of most recent (maybe 10 or so) API requests made and responses received may be helpful. 
 
-2) A way to clear just the browser cache entries/cookies associated with Uber's oAuth process. That way, when developers want to test the oAuth flow of their apps again, they don't need to clear all of their cache and cookies (including ones for other sites they might want to keep).
+2) A way to clear just the browser cache entries/cookies associated with Uber's oAuth process. That way, when developers want to test the OAuth flow of their apps again, they don't need to clear all of their cache and cookies (including ones for other sites they might want to keep).
 
 3) A list of common errors and how to fix them in the API tutorial.
